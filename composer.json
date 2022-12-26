@@ -1,45 +1,51 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "fikrimastor/laravel-role-permission",
+    "description": "Simple role and permissions package for laravel projects.",
     "keywords": [
-        ":vendor_name",
-        ":package_slug"
+        "fikrimastor",
+        "laravel-role-permission"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/fikrimastor/laravel-role-permission",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Fikri Mastor",
+            "email": "fikrimastor@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.1"
+        "php": "^7.4|^8.0|^8.1",
+        "illuminate/auth": "^7.0|^8.0|^9.0",
+        "illuminate/cache": "^7.0|^8.0|^9.0",
+        "illuminate/container": "^7.0|^8.0|^9.0",
+        "illuminate/contracts": "^7.0|^8.0|^9.0",
+        "illuminate/database": "^7.0|^8.0|^9.0"
     },
     "require-dev": {
-        :require_dev_testing,
-        :require_dev_codestyle,
+        "phpunit/phpunit": "^9.5",
+        "friendsofphp/php-cs-fixer": "^3.13",
         "spatie/ray": "^1.28"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "Fikrimastor\\LaravelRolePermission\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Fikrimastor\\LaravelRolePermission\\Tests\\": "tests"
         }
     },
     "scripts": {
-        :scripts_testing,
-        :scripts_codestyle
+        "test": "vendor/bin/phpunit",
+            "test-coverage": "vendor/bin/phpunit --coverage",
+        "format": "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --allow-risky=yes"
     },
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            :plugins_testing,
+
             "phpstan/extension-installer": true
         }
     },

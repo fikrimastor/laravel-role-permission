@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Fikrimastor\LaravelRolePermission\Tests;
 
 use PHPUnit\Framework\TestCase;
 
